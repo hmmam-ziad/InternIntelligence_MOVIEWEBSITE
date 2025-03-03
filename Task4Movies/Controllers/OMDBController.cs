@@ -17,7 +17,7 @@ namespace Task4Movies.Controllers
         public OMDBController()
         {
             _httpClient = new HttpClient();
-            _url = "http://www.omdbapi.com/?i=tt3896198&apikey=f479cd88";
+            _url = "http://www.omdbapi.com/?i=tt3896198&apikey={your own key}";
         }
 
 
@@ -48,7 +48,7 @@ namespace Task4Movies.Controllers
         [HttpGet("[action]/{imdbId}")]
         public async Task<IActionResult> GetMovieById([FromRoute]string imdbId)
         {
-            string u = $"http://www.omdbapi.com/?i={imdbId}&apikey=f479cd88";
+            string u = $"http://www.omdbapi.com/?i={imdbId}&apikey={your own key}";
             var response = await _httpClient.GetAsync($"{u}");
 
             if (!response.IsSuccessStatusCode)
