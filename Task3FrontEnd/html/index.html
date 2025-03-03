@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Page</title>
+    <link href="../css/styles.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Exciting Movies</h1>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for movies..." class="search-input">
+            <button class="search-button">🔍</button>
+        </div>
+        <nav>
+            <a href="login.html" id="logButton">Login</a>
+            <a href="register.html" id="regbutton">Register</a>
+            <a class="category">Hollywood</a>
+            <a class="category">Bollywood</a>
+            <a class="category">Series</a>
+            <a id="outButton" style="display: none">Logout</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div id="popupForm" class="popup-form">
+            <form id="formContent" method="post">
+                <label for="title">Movie Title:</label>
+                <input type="text" id="title" name="title" placeholder="Enter movie title">
+
+                <label for="description">Description:</label>
+                <input type="text" id="description" name="description" placeholder="Enter movie description" />
+
+                <label for="vidUrl">Video URL:</label>
+                <input type="text" id="vidUrl" name="vidUrl" placeholder="Enter video URL">
+
+                <label for="director">Director:</label>
+                <input type="text" id="director" name="director" placeholder="Enter movie director">
+
+                <label for="genre">Genre:</label>
+                <input type="text" id="genre" name="genre" placeholder="Enter movie genre">
+
+                <label for="year">Year:</label>
+                <input type="number" id="year" name="year" placeholder="Enter movie year">
+
+                <label for="rating">Rating:</label>
+                <input type="number" id="rating" name="rating" step="0.1" min="0" max="10" placeholder="Enter movie rating">
+
+                <label for="posterUrl">Poster URL:</label>
+                <input type="text" id="posterUrl" name="posterUrl" placeholder="Enter poster URL">
+
+                <button type="submit">Submit</button>
+                <button type="button" id="closeForm">Close</button>
+            </form>
+
+        </div>
+        <div class="movie-container">
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <p>Made By Hmmam</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../JavaScript/LoginAndRegister.js"></script>
+    <script src="../JavaScript/Movie.js"></script>
+    <script src="../JavaScript/OMDB.js"></script>
+</body>
+</html>

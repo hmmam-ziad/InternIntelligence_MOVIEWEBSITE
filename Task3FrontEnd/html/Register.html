@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link href="../css/styles.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Register</h1>
+        <nav>
+            <a href="index.html">Home</a>
+        </nav>
+    </header>
+    <main>
+        <form id="registerForm" method="post">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+            <label for="password">Confirm Password:</label>
+            <input type="password" id="Confirmpassword" required>
+            <button type="submit">Register</button>
+        </form>
+        <p id="message"></p>
+    </main>
+    <footer>
+        <p>All rights reserved &copy; 2023</p>
+        <div class="footer-links">
+            <p>Made With Love By Hmmam</p>
+        </div>
+    </footer>
+    <script src="../JavaScript/LoginAndRegister.js"></script>
+</body>
+</html>

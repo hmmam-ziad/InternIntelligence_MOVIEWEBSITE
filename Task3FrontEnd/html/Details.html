@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Details</title>
+    <link href="../css/styles.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .movie-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            margin-top: 20px;
+        }
+
+        .movie-card {
+            display: flex;
+            gap: 20px;
+            background: linear-gradient(135deg, #7a1ea1, #6a0dad);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+        }
+
+        .movie-card img {
+            width: 250px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .movie-info {
+            flex: 1;
+        }
+
+        .movie-info h2 {
+            margin-bottom: 10px;
+        }
+
+        .movie-info p {
+            margin: 5px 0;
+        }
+
+        .links {
+            display: flex;
+            justify-content: center;
+            gap: 7px;
+        }
+
+        .links .button {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #ff5733;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .delete-button {
+            background: red;
+        }
+
+        .edit-button {
+            background: #f1c40f;
+        }
+
+        .links .button:hover {
+            background-color: #e64a19;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Movie Details</h1>
+        <nav>
+            <a href="index.html">Back to Movies</a>
+        </nav>
+    </header>
+    <main>
+        <div id="popupForm" class="popup-form">
+            <form id="formContent" method="post">
+                <label for="title">Movie Title:</label>
+                <input type="text" id="title" name="title" placeholder="Enter movie title">
+
+                <label for="description">Description:</label>
+                <input type="text" id="description" name="description" placeholder="Enter movie description" />
+
+                <label for="vidUrl">Video URL:</label>
+                <input type="text" id="vidUrl" name="vidUrl" placeholder="Enter video URL">
+
+                <label for="director">Director:</label>
+                <input type="text" id="director" name="director" placeholder="Enter movie director">
+
+                <label for="genre">Genre:</label>
+                <input type="text" id="genre" name="genre" placeholder="Enter movie genre">
+
+                <label for="year">Year:</label>
+                <input type="number" id="year" name="year" placeholder="Enter movie year">
+
+                <label for="rating">Rating:</label>
+                <input type="number" id="rating" name="rating" step="0.1" min="0" max="10" placeholder="Enter movie rating">
+
+                <label for="posterUrl">Poster URL:</label>
+                <input type="text" id="posterUrl" name="posterUrl" placeholder="Enter poster URL">
+
+                <button type="submit">Submit</button>
+                <button type="button" id="closeForm">Close</button>
+            </form>
+
+        </div>
+        <div class="movie-container">
+
+        </div>
+    </main>
+    <footer>
+        <p>All rights reserved &copy; 2023</p>
+        <div class="footer-links">
+            <p>Made With Love By Hmmam</p>
+        </div>
+    </footer>
+    <script src="../JavaScript/Details.js"></script>
+</body>
+</html>
